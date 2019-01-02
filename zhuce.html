@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta http-equiv="Cache=Control" content="no-siteapp"/>
+<title>注册</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<link href="static/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.min.css" />
+</head>
+<body ontouchstart>
+        <!--内容页面开始-->
+        <!--最外层内容框-->
+            <div class="container ui-sortable">
+	        <nav class="breadcrumb">
+	            <div class="container">
+			<i class="Hui-iconfont">&#xe67f;</i>
+			<a href="huanying.html" class="c-primary">欢迎</a>
+			<span class="c-gray en">&gt;</span>
+			<a href="zhuye.php" class="c-primary">首页</a>
+		        <span class="c-gray en">&gt;</span>
+			<a href="denglu.html" class="c-primary">登录</a>
+			<span class="c-gray en">&gt;</span>
+			<span class="c-gray">注册</span>
+		    </div>
+	        </nav>
+                <!--外层内容框-->
+                <div class="panel panel-default mt-20">
+                    <!--内容头部框-->
+                    <div class="panel-header">注册</div>
+                    <!--内容主体框-->
+                    <div class="panel-body">
+		        <form action="zhuce.php" method="post" class="form form-horizontal responsive" id="demoform">
+			    <div class="row cl">
+			        <label class="form-label col-xs-3">邮箱：</label>
+			        <div class="formControls col-xs-8">
+				   <input type="text" class="input-text" placeholder="@" name="email" id="email" autocomplete="off">
+			        </div>
+			    </div>
+			    <div class="row cl">
+				<label class="form-label col-xs-3">用户名：</label>
+				<div class="formControls col-xs-8">
+				    <input type="text" class="input-text" placeholder="4~16个字符，字母/中文/数字/下划线" name="username" id="username">
+				</div>
+			    </div>
+			    <div class="row cl">
+				<label class="form-label col-xs-3">密码：</label>
+				<div class="formControls col-xs-8">
+			            <input type="password" class="input-text" autocomplete="off" placeholder="密码" name="password" id="password">
+				</div>
+			    </div>
+				<div class="row cl">
+				    <label class="form-label col-xs-3">密码验证：</label>
+				<div class="formControls col-xs-8">
+				    <input type="password" class="input-text" autocomplete="off" placeholder="密码" name="password2" id="password2">
+				</div>
+			    </div>
+			    <div class="row cl">
+				<div class="col-xs-8 col-xs-offset-3">
+				    <input class="btn btn-primary" type="submit" name="submit" value="&nbsp;&nbsp;注册&nbsp;&nbsp;">
+				</div>
+			    </div>
+			</form>
+                   </div>
+               </div>
+            </div>
+
+    <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="static/h-ui/js/H-ui.js"></script>
+    <script type="text/javascript" src="lib/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+    <script>
+$(function(){
+	$(".input-text,.textarea").Huifocusblur();
+        
+	//邮箱提示	
+	$("#email").emailsuggest();
+	
+	//checkbox 美化
+	$('.skin-minimal input').iCheck({
+		checkboxClass: 'icheckbox-blue',
+		radioClass: 'iradio-blue',
+		increaseArea: '20%'
+	});
+
+	$("#demoform").validate({
+		rules:{
+			email:{
+				required:true,
+				email:true,
+			},
+			username:{
+				required:true,
+				minlength:4,
+				maxlength:16
+			},
+			
+			password:{
+				required:true,
+				minlength:6,
+				maxlength:12
+			},
+			password2:{
+				required:true,
+				equalTo: "#password"
+			},
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+			$("#modal-shenqing-success").modal("show");
+			$("#demoform")[0].Submit();
+		}
+	});
+});
+</script>
+</body>
+</html>
