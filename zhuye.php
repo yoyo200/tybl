@@ -19,24 +19,24 @@ if(!isset($_SESSION['userid'])){
         <meta name="keywords" content="">
         <meta name="description" content="">
         <!--[if lt IE 9]>
-            <script type="text/javascript" src="lib/html5shiv.js">
+            <script type="text/javascript" src="assets/html5shiv.js">
             </script>
-            <script type="text/javascript" src="lib/respond.min.js">
+            <script type="text/javascript" src="assets/respond.min.js">
             </script>
         <![endif]-->
         <!--[if lt IE 9]>
-            <link href="static/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css"
+            <link href="assets/H-ui.ie.css" rel="stylesheet" type="text/css"
             />
         <![endif]-->
         <!--[if IE 6]>
-            <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js">
+            <script type="text/javascript" src="assets/DD_belatedPNG_0.0.8a-min.js">
             </script>
             <script>
                 DD_belatedPNG.fix('*');
             </script>
         <![endif]-->
-        <link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css"/>
-        <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.min.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/H-ui.min.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/iconfont.min.css"/>
         <style>
             .qipao{display:inline-block; margin-left:50px; margin-top:0px; border:1px solid #ccffff; border-radius:10px; background:rgba(204,255,204,0.3);}
             .shijian{margin-left:50px; margin-top:-45px;}
@@ -218,19 +218,19 @@ if(!isset($_SESSION['userid'])){
             </div>
         </div>
         
-        <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js">
+        <script type="text/javascript" src="assets/jquery/1.9.1/jquery.min.js">
         </script>
-        <script type="text/javascript" src="lib/jquery-ui/1.9.1/jquery-ui.min.js">
+        <script type="text/javascript" src="assets/jquery-ui.min.js">
         </script>
-        <script type="text/javascript" src="static/h-ui/js/H-ui.js">
+        <script type="text/javascript" src="assets/H-ui.js">
         </script>
-        <script type="text/javascript" src="lib/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js">
+        <script type="text/javascript" src="assets/jquery.SuperSlide.min.js">
         </script>
-        <script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.min.js">
+        <script type="text/javascript" src="assets/jquery.validate.min.js">
         </script>
-        <script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js">
+        <script type="text/javascript" src="assets/validate-methods.js">
         </script>
-        <script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.min.js">
+        <script type="text/javascript" src="assets/messages_zh.min.js">
         </script>
         <?php
         if(isset($_SESSION['userid'])){
